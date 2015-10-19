@@ -27,11 +27,10 @@ if __name__ == "__main__":
             if elem == 'src':
                 if dicc[elem].startswith('http://'):
                     ddp2 = urllib.request.urlopen(dicc[elem])
-                    print(ddp2.read())
+                    ddp2.read()
                     ddp2.close()
                     indice = str.rfind(dicc[elem], '/')
                     dicc[elem] = dicc[elem][indice+1:]
-        print()
 
     for linea in ccHandler.get_tags():       
         print (linea[0], end="\t")
